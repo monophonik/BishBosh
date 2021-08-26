@@ -8,9 +8,31 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
 </head>
-<body>
-    <h1>Bish-Bosh</h1>
 
-    <div></div>
+<body onload="generate()">
+
+    <header>
+        <h1>Bish-Bosh</h1>
+    </header>
+
+    <main>
+
+        <label for="numbers">Antal nummer:</label>
+        <input type="range" id="numbers" min="0" max="300" value="30" oninput="generate()">
+        <label for="numbers" id="numbersLb">30</label>
+        <br>
+        <label for="bish">Bish-nummer:</label>
+        <input type="range" id="bish" min="0" max="300" value="3" oninput="generate()">
+        <label for="bish" id="bishLb">3</label>
+        <br>
+        <label for="bosh">Bosh-nummer:</label>
+        <input type="range" id="bosh" min="0" max="300" value="4" oninput="generate()">
+        <label for="bosh" id="boshLb">4</label>
+        <br>
+
+        <div id="result" class="bbResult"></div>
+        
+    </main>
+
 </body>
 </html>
